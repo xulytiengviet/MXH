@@ -8,7 +8,7 @@ Dashboard điều khiển LIVE tiếng Việt, giao diện dark glassmorphism v�
 - Cấu hình TikTok username, Xiaozhi WebSocket URL, cooldown phản hồi, bộ lọc bình luận, chào thành viên và cooldown chào.
 - Năm KPI: bình luận, lượt gửi Xiaozhi, đang xem, người tham gia, uptime.
 - Theo dõi bình luận, sự kiện tham gia và console; xuất console ra tệp TXT có ẩn URL/token cơ bản.
-- Sân khấu mô phỏng với hình nền động, 4 preset gradient, ảnh tải cục bộ hoặc URL HTTPS.
+- Sân khấu mô phỏng với hình nền động, 4 preset gradient + 3 ảnh GIF anime tham chiếu (phụ thuộc website bên ngoài), ảnh tải cục bộ hoặc URL HTTPS.
 - **Demo dữ liệu giả lập** để kiểm tra UI, luôn hiển thị nhãn DEMO.
 - Tự thử kết nối lại backend tối đa 3 lần khi WebSocket bị ngắt.
 - Không dùng framework, không yêu cầu build Node.js để chạy website.

@@ -333,6 +333,7 @@ function connectBackend(isRetry = false) {
 }
 
 function handleMessage(msg) {
+  if (state.mode === "demo") return; // Never mix real backend events into demo metrics.
   // Server remains authoritative for LIVE state and counters.
   const event = String(msg.event || "");
   if (event === "log") {
@@ -560,7 +561,10 @@ const backgrounds = {
   aurora: "radial-gradient(ellipse at 38% 26%,#3c375ea3,transparent 52%),radial-gradient(ellipse at 72% 68%,#21687580,transparent 55%),linear-gradient(135deg,#10152e,#172439 50%,#0c1223)",
   cyber: "radial-gradient(ellipse at 22% 65%,#fd367a88,transparent 45%),radial-gradient(ellipse at 81% 25%,#28c4e588,transparent 50%),linear-gradient(120deg,#241035,#141932,#0c1729)",
   sunset: "radial-gradient(circle at 35% 80%,#ed7b6388,transparent 50%),radial-gradient(circle at 70% 20%,#c23d7888,transparent 55%),linear-gradient(130deg,#261332,#49315b,#1c2037)",
-  midnight: "radial-gradient(circle at 75% 34%,#255c9270,transparent 50%),linear-gradient(120deg,#0a1120,#1b2b45,#080f21)"
+  midnight: "radial-gradient(circle at 75% 34%,#255c9270,transparent 50%),linear-gradient(120deg,#0a1120,#1b2b45,#080f21)",
+  "anime-warrior": 'url("https://cdn-media.sforum.vn/storage/app/media/thanhhuyen/%E1%BA%A3nh%20%C4%91%E1%BB%99ng%20anime/1/anh-dong-anime-4.gif")',
+  "anime-cool": 'url("https://cdn-media.sforum.vn/storage/app/media/thanhhuyen/%E1%BA%A3nh%20%C4%91%E1%BB%99ng%20anime/1/anh-dong-anime-3.gif")',
+  "anime-lady": 'url("https://cdn-media.sforum.vn/storage/app/media/thanhhuyen/%E1%BA%A3nh%20%C4%91%E1%BB%99ng%20anime/4/anh-dong-anime-26.gif")'
 };
 
 function applyPreset(name) {
